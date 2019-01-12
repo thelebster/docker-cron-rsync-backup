@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  rsync-cron-backup:
+    build: .
+    container_name: cron-rsync-backup
+    environment:
+      - SFTP_SERVER=${SFTP_SERVER}
+      - DESTINATION_DIR=${DESTINATION_DIR}
+      - SOURCE_DIR=${SOURCE_DIR}
+    restart: always
+    volumes:
+      - ${SSH_KEY_PATH}:/.ssh/private:ro
+      - ${HOST_SOURCE_DIR}:${SOURCE_DIR}:ro
