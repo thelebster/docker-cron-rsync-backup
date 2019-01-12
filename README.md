@@ -8,7 +8,7 @@ Copy `example.env` to `.env`.
 cp example.env .env
 ```
 
-* `HOST_SOURCE_DIR=/home/user/files` — path on the host machine that need to be backuped.
+* `HOST_SOURCE_DIR=/home/user/files` — path on the host machine that need to be backed up.
 * `SFTP_SERVER=user@server`
 * `DESTINATION_DIR=backup` - path on remote server.
 * `SOURCE_DIR=/files` - path to docker volume.
